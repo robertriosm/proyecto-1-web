@@ -10,11 +10,14 @@ $bg-search: #202020
 $profile-gray: #e7e7e7
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
     
 @font-face 
-    font-family: main-font
-    src: url('../public/fonts/BrutalType-Bold.ttf')
+    font-family: brutal-font
+    src: url('../public/fonts/BrutalType.ttf')
+
+@font-face 
+    font-family: open-sans
+    src: url('../public/fonts/OpenSans.ttf')
 
 
 // App
@@ -24,6 +27,11 @@ body
     color: $white-font
     margin: 0 
     padding: 0
+    font-family: brutal-font
+
+.main-container
+    width: 75%
+    margin: auto
 
 // Header
 
@@ -33,7 +41,7 @@ header
     background-color: $bg-header-color
     height: 58px
     width: 100%
-    font-family: 'Open Sans', sans-serif, arial
+    font-family: open-sans
     font-size: 10.5px
     display: flex
     justify-content: space-between
@@ -75,16 +83,13 @@ header
 // SearchBar
 
 nav
-    font-family: main-font
     color: $my-gray
     background-color: $bg-color
     position: sticky
     top: 0
     display: flex
-    width: 75%
     max-width: 1600px
     height: 108px
-    margin: auto
     justify-content: space-between
     div
         display: flex
@@ -92,31 +97,36 @@ nav
             display: flex
             align-items: center
             justify-content: center
-            padding: 0 10px
+            padding: 0 20px
+    div:first-child
+        padding: 0
+        img
+            padding-left: 15px 
     .search-input
         background-color: $bg-search
         height: fit-content
         vertical-align: middle
         border-radius: 25px
         input
+            font-family: brutal-font
             height: 40px
             background-color: $bg-search
             border-radius: 25px
             border: 0
             color: $my-gray
-            max-width: 110px
+            max-width: 128px
             font-size: 15px
         input:focus
             outline: none
             color: $white-font
         img
-            padding: 10px
+            padding-right: 10px
         ::placeholder
-            color: #ffff34
+            color: $my-gray
         :-ms-input-placeholder
-            color: #ffff34
+            color: $my-gray
         ::-ms-input-placeholder
-            color: #ffff34
+            color: $my-gray
         
     p
         margin: 0
