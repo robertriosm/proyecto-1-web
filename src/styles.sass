@@ -4,18 +4,122 @@ $btn-blue: #0078F2
 $white-font: #f5f5f5
 $gray-light: #cccccc
 $my-gray: #f5f5f599
-$bg-header-color: #ffffff1A
+$bg-header-color: #2a2a2a
 $bg-color: #121212
+$bg-search: #202020
+$profile-gray: #e7e7e7
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+    
+@font-face 
+    font-family: main-font
+    src: url('../public/fonts/BrutalType-Bold.ttf')
+
 
 // App
 
 body
     background-color: $bg-color
     color: $white-font
-    font-family: sans-serif
-
-div
-    background-color: $bg-header-color
+    margin: 0 
+    padding: 0
 
 // Header
 
+header  
+    position: relative
+    color: $gray-light
+    background-color: $bg-header-color
+    height: 58px
+    width: 100%
+    font-family: 'Open Sans', sans-serif, arial
+    font-size: 10.5px
+    display: flex
+    justify-content: space-between
+    letter-spacing: 1.7px
+    top: 0
+    left: 0
+
+    div
+        display: flex
+        div
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 0 15px
+
+    .logo
+        min-width: 76px
+        padding: 0 0
+        input
+            transform: translate(0px, -1px)
+
+    .profile-nav
+        color: $profile-gray
+        p
+            padding: 0 10px
+
+    .language-nav
+        img
+            transform: translate(-10px, 0px)
+       
+    .right-nav
+        letter-spacing: 1px
+        font-size: 10px
+        
+    .nav-blue
+        color: $white-font
+        background-color: $btn-blue
+
+// SearchBar
+
+nav
+    font-family: main-font
+    color: $my-gray
+    background-color: $bg-color
+    position: sticky
+    top: 0
+    display: flex
+    width: 75%
+    max-width: 1600px
+    height: 108px
+    margin: auto
+    justify-content: space-between
+    div
+        display: flex
+        div
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 0 10px
+    .search-input
+        background-color: $bg-search
+        height: fit-content
+        vertical-align: middle
+        border-radius: 25px
+        input
+            height: 40px
+            background-color: $bg-search
+            border-radius: 25px
+            border: 0
+            color: $my-gray
+            max-width: 110px
+            font-size: 15px
+        input:focus
+            outline: none
+            color: $white-font
+        img
+            padding: 10px
+        ::placeholder
+            color: #ffff34
+        :-ms-input-placeholder
+            color: #ffff34
+        ::-ms-input-placeholder
+            color: #ffff34
+        
+    p
+        margin: 0
+    
+    .lupa 
+        left: 125px
