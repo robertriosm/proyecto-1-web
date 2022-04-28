@@ -1,8 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundled.js',
@@ -15,6 +19,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
       },
       {
         test: /\.sass|scss$/,
@@ -22,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['url-loader?limit=10000', 'img-loader'],
+        use: ['url-loader?limit=10000', 'img-loader'], // image loader para los svg
       },
     ],
   },
@@ -30,6 +37,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       // filename: "index.html",
+    }),
+    new ESLintPlugin({
+      extensions: ['jsx'],
     }),
   ],
 }
