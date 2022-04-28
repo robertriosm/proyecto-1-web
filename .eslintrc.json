@@ -6,7 +6,6 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "prettier",
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],
@@ -18,5 +17,12 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
-  "rules": { "prettier/prettier": "warn" }
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
