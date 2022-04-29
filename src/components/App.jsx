@@ -2,12 +2,12 @@ import React from 'react'
 import Header from './Header'
 import SearchBar from './Search-Bar'
 import Footer from './Footer'
-import Explore from './Explore'
-import ScrollProducts from './Scroll-Products'
-import TwoProducts from './TwoProducts'
-import ThreeColumnProducts from './ThreeColumnProducts'
-import FreeGames from './FreeGames'
-import WishList from './WishList'
+// import Explore from './Explore'
+// import ScrollProducts from './Scroll-Products'
+// import TwoProducts from './TwoProducts'
+// import ThreeColumnProducts from './ThreeColumnProducts'
+// import FreeGames from './FreeGames'
+// import WishList from './WishList'
 import NewProducts from './New-Products'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <div className="main-container">
         <SearchBar />
         <NewProducts />
-        <WishList />
+        {/* <WishList />
         <ScrollProducts />
         <TwoProducts />
         <FreeGames />
@@ -27,7 +27,7 @@ function App() {
         <ScrollProducts />
         <ScrollProducts />
         <ScrollProducts />
-        <Explore />
+        <Explore /> */}
       </div>
       <Footer />
     </div>

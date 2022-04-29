@@ -1,6 +1,7 @@
 // paleta de colores
 
 $btn-blue: #0078F2
+$btn-blue-2: #218cf6
 $white-font: #f5f5f5
 $gray-light: #cccccc
 $my-gray: #f5f5f599
@@ -22,12 +23,18 @@ $profile-gray: #e7e7e7
 
 // App
 
+html
+    height: 100%
+
 body
     background-color: $bg-color
     color: $white-font
     margin: 0 
     padding: 0
     font-family: brutal-font
+    display: flex
+    flex-direction: column
+    min-height: 100%
 
 .main-container
     width: 75%
@@ -39,7 +46,7 @@ header
     position: relative
     color: $gray-light
     background-color: $bg-header-color
-    height: 58px
+    height: 52px
     width: 100%
     font-family: open-sans
     font-size: 10.5px
@@ -66,7 +73,7 @@ header
     .profile-nav
         color: $profile-gray
         p
-            padding: 0 10px
+            padding: 0 5px
 
     .language-nav
         img
@@ -74,22 +81,26 @@ header
        
     .right-nav
         letter-spacing: 1px
-        font-size: 10px
+        font-size: 8.5px
         
     .nav-blue
         color: $white-font
         background-color: $btn-blue
+    .nav-blue:hover
+        background-color: $btn-blue-2
 
 // SearchBar
 
 nav
+    font-size: 14px
+    z-index: 2
     color: $my-gray
     background-color: $bg-color
     position: sticky
     top: 0
     display: flex
     max-width: 1600px
-    height: 108px
+    height: 100px
     justify-content: space-between
     div
         display: flex
@@ -97,7 +108,7 @@ nav
             display: flex
             align-items: center
             justify-content: center
-            padding: 0 20px
+            padding: 0 18px
     div:first-child
         padding: 0
         img
@@ -109,18 +120,18 @@ nav
         border-radius: 25px
         input
             font-family: brutal-font
-            height: 40px
+            height: 37px
             background-color: $bg-search
             border-radius: 25px
             border: 0
             color: $my-gray
-            max-width: 128px
-            font-size: 15px
+            max-width: 108px
+            font-size: 14px
         input:focus
             outline: none
             color: $white-font
         img
-            padding-right: 10px
+            padding-right: 8px
         ::placeholder
             color: $my-gray
         :-ms-input-placeholder
@@ -128,8 +139,103 @@ nav
         ::-ms-input-placeholder
             color: $my-gray
         
-    p
-        margin: 0
+    p:hover
+        color: $white-font
+
+// news contaner
+
+.news
+    position: relative
+    display: flex
+
+    // big one
+    img
+        z-index: 0
+        border-radius: 25px
+    .big-one
+        p
+            font-size: 14px
+        input
+            border-radius: 2px
+            border: 0
+            color: $bg-color
+        .biggest
+            position: relative
+            div
+                left: 50px
+                bottom: 50px
+                position: absolute
     
-    .lupa 
-        left: 125px
+    // 6 littles
+
+    .list-6
+        margin-left: 30px
+        display: grid
+        grid-template-rows: repeat(6, 88.33px)
+    ul
+        list-style-type: none
+    .littlest
+        position: relative
+        border-radius: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            border-radius: 7px
+            position: relative
+            margin: 12px
+        p
+            position: relative
+    .littlest:hover
+        background-color: $bg-search
+
+// footer
+
+footer
+    font-family: open-sans
+    align-self: flex-end
+    background-color: $bg-search
+    display: flex
+
+    .parag
+        max-width: 50%
+        color: $my-gray
+
+    hr 
+        border: 10px solid $bg-search
+        border-top: 2px solid $bg-header-color
+    .square
+        border: solid $white-font 2px
+        border-radius: 5px
+    .outer
+        padding: 20px 72px 40px
+    p
+        color: $profile-gray
+        font-size: 15px
+    .foot-info
+        display: flex
+        justify-content: space-between
+        p
+            padding-right: 30px 
+            font-size: 13px
+        p:hover
+            color: $btn-blue
+        div
+            display: flex
+        img
+            margin: 5px
+    h4
+        color: $my-gray
+        margin: 0px
+    .list-ops
+        ul
+            list-style-type: none
+            margin: 0 15px 0 0
+            padding: 0
+            li
+                p
+                    margin: 4px
+        position: relative
+        display: flex
+
+// 

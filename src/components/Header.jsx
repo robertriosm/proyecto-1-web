@@ -8,7 +8,7 @@ function Header() {
     <header>
       <div>
         <div className="logo">
-          <input type="image" src={logo} alt="logo" height="44" />
+          <input type="image" src={logo} alt="logo" height="42" />
         </div>
         <div>
           <p>TIENDA</p>
@@ -25,10 +25,10 @@ function Header() {
       </div>
       <div className="right-nav">
         <div className="language-nav">
-          <img src={language} alt="language icon" height="30" />
+          <img src={language} alt="language icon" height="28" />
         </div>
         <div className="profile-nav">
-          <img src={person} alt="person icon" height="30" />
+          <img src={person} alt="person icon" height="28" />
           <p>THEWIZARDROB</p>
         </div>
         <div className="nav-blue">CONSIGUE EPIC GAMES</div>
