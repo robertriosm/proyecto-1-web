@@ -1,7 +1,7 @@
 import React from 'react'
 
 function WishList() {
-  return <div>puta</div>
+  return <div>a</div>
 }
 
 export default WishList

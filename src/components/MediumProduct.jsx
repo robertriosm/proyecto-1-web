@@ -1,7 +1,7 @@
 import React from 'react'
 
 function MediumProduct() {
-  return <div>puta</div>
+  return <div>a</div>
 }
 
 export default MediumProduct

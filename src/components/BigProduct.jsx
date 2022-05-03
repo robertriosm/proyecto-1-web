@@ -1,7 +1,7 @@
 import React from 'react'
 
 function BigProduct() {
-  return <div>puta</div>
+  return <div>a</div>
 }
 
 export default BigProduct
